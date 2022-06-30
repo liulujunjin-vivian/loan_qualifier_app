@@ -1,5 +1,6 @@
 # Loan Qualifier Application
 
+## Description  
 This APP is a python CLI (command line interface) application that gives the user fast way of seeing qualifying loans from the bank. This application works by taking a sheet('daily_rate_sheet') located at path(./data/daily_rate_sheet.csv), which provided various loan providers. The providers will ask user some simple questions to evaluate users loan eligibility,and the APP will give the user a spreadsheet of qualifying loans
 
 ---
@@ -30,8 +31,15 @@ To use the loan qualifier application simply clone the repository and run the **
 ```python
 python app.py
 ```
-
-
+## usage examples: 
+one of our customers use these datas to test his app  
+there is also a picture to show how to work with this app  
+>credit_score = 750
+>debt = 5000
+>income = 20000
+>loan_amount = 100000
+>home_value = 210000
+![this is the picture instruction.](https://raw.githubusercontent.com/KellenCrimson/loan_qualifier_app/main/Pic/pic_guide.jpg)
 ---
 
 ## Content Added History(ver1)
@@ -49,6 +57,10 @@ python app.py [nested_list]
 Move function save_csv to ./qualifier/utils/fileio.py
 delete import csv code
 modify from qualifier.utils.fileio import (load_csv, save_csv)
+
+## Content Added History(ver3)   
+create new function 'save_qualifying_loans',which ask user friendly  
+to provide a file path for the spreadsheet. instructions listed above
 ---
 
 ## Contributors

@@ -1,0 +1,11 @@
+git status
+git add readme.md
+git add app.py
+git add data
+git add qualifier
+git add terminal_history.txt
+git commit -m"copy the starter code to github"
+git push
+
+
+

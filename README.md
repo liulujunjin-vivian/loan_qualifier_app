@@ -44,6 +44,11 @@ if __name__ == "__main__":
 ```python
 python app.py [nested_list]
 ```
+
+## Content Added History(ver2)
+Move function save_csv to ./qualifier/utils/fileio.py
+delete import csv code
+modify from qualifier.utils.fileio import (load_csv, save_csv)
 ---
 
 ## Contributors

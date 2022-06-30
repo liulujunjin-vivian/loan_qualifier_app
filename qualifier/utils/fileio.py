@@ -5,6 +5,7 @@ This contains a helper function for loading and saving CSV files.
 
 """
 import csv
+import questionary
 
 
 def load_csv(csvpath):
@@ -28,3 +29,19 @@ def load_csv(csvpath):
         for row in csvreader:
             data.append(row)
     return data
+
+#this is a function that receive a nested list
+#and save the data in a csv file 
+#the purpose is to provide the user a spreadsheet
+def save_csv(qualification_list):
+    print("Providing a spreadsheet requires file path\n"
+        + "please enter a path (./your_file_name.csv)")
+    
+    csvpath = questionary.text("Enter a file path to a rate-sheet").ask()
+    header = ["lender", "Max Loan Amount", "Max DTI", "Min Credit Score", "Interest Rate"]
+    
+    with open(csvpath, 'w') as my_file:
+        csvwriter = csv.writer(my_file)
+        csvwriter.writerow(header)
+        for line in qualification_list:
+            csvwriter.writerow(line)

@@ -109,7 +109,11 @@ def save_qualifying_loans(qualifying_loans):
     """
     # @TODO: Complete the usability dialog for savings the CSV Files.
     # YOUR CODE HERE!
-
+    print("Providing a spreadsheet requires file path\n"
+        + "please enter a path (./your_file_name.csv)")
+    
+    csvpath = questionary.text("Enter a file path to a rate-sheet").ask()
+    save_csv(csvpath, qualifying_loans)
 
 def run():
     """The main function for running the script."""
@@ -130,4 +134,4 @@ def run():
 
 
 if __name__ == "__main__":
-    fire.Fire(save_csv)
+    fire.Fire(run)

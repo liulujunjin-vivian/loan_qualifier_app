@@ -16,6 +16,11 @@ git add README.md app.py terminal_history.txt
 git commit -m "fix wrong codes"
 git push
 
+git status
+git add README.md app.py qualifier/utils/fileio.py terminal_history.txt
+git commit -m"refine csv_save function to util.fileio.py to make it reusable"
+Git push
+
 
 
 
